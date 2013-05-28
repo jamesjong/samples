@@ -53,5 +53,7 @@ module.exports = function(grunt) {
   // Tasks - default , test
   grunt.registerTask('default', ['clean','jshint:beforeconcat','concat','jshint:afterconcat','qunit','uglify']);
   grunt.registerTask('test', ['jshint', 'qunit']);
+  grunt.registerTask('build', ['clean','jshint:beforeconcat','concat','jshint:afterconcat']);
+  grunt.registerTask('publish', ['clean','jshint:beforeconcat','concat','jshint:afterconcat','qunit','uglify']);
 
 };
